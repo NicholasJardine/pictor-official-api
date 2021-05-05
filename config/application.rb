@@ -15,21 +15,6 @@ module PictorOfficialApi
     end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
-    config.api_only = true
-    config.middleware.use ActionDispatch::Flash
-
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-        origins '*'
-        resource(
-          '*',
-          headers: :any,
-          methods: [:get, :patch, :put, :delete, :post, :options]
-          )
-      end
-    end
-
-
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
