@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ActionController::Base
  def index
- @users = User.order(created_at: :desc)
+ @users = User.all
  render json: @users
  end
  def show
